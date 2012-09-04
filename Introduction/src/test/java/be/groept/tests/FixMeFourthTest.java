@@ -7,7 +7,7 @@ import be.groept.generics.Base1;
 import be.groept.generics.Base2;
 import be.groept.generics.Super;
 
-public class FixMeFourth {
+public class FixMeFourthTest {
 
 	public void testGenerics() {
 

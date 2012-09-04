@@ -4,9 +4,9 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 @Test
-public class FixMeFirst {
+public class FixMeFirstTest {
 
-	public void thisStringEquals() {
+	public void test() {
 		Assert.assertEquals("test string", "wrong string");
 	}
 }

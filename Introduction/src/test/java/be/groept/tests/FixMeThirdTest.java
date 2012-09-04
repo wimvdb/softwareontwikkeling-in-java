@@ -10,7 +10,7 @@ import org.testng.internal.PackageUtils;
 import be.groept.annotations.ImASecuredClass;
 
 @Test
-public class FixMeThird {
+public class FixMeThirdTest {
 
 	public void scanForClassesWithSecuredAnnotations() throws Exception {
 		List<String> include = new ArrayList<String>();

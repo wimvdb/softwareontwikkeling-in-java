@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import be.groept.equalshashcode.EmployeeRecord;
 
 @Test
-public class FixMeSecond {
+public class FixMeSecondTest {
 
 	public void testEqualsHashcode() {
 
