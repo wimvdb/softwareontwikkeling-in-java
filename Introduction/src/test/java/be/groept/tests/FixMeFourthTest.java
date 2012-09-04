@@ -3,8 +3,8 @@ package be.groept.tests;
 import java.util.ArrayList;
 import java.util.Collection;
 
-import be.groept.generics.Base1;
 import be.groept.generics.Base2;
+import be.groept.generics.Base3;
 import be.groept.generics.Super;
 
 public class FixMeFourthTest {
@@ -25,11 +25,15 @@ public class FixMeFourthTest {
 		//thisWillNotWork(collection);
 
 		// -- LOWER BOUNDS
-		Collection<Base1> upperboundCollection = new ArrayList<Base1>();
-		upperboundCollection.add(new Base1());
+		Collection<Base2> upperboundCollectionOne = new ArrayList<Base2>();
+		upperboundCollectionOne.add(new Base2());
+		Collection<Base3> upperboundCollectionTwo= new ArrayList<Base3>();
+		upperboundCollectionTwo.add(new Base3());
+
 		// TODO THIRD --------> Uncomment [2] Make it work, rewrite message
 		// signature if needed
-		 //thisWillNotWorkEither(upperboundCollection);
+		//thisWillNotWorkEither(upperboundCollectionOne);
+		//thisWillNotWorkEither(upperboundCollectionTwo);
 
 	}
 
@@ -38,7 +42,7 @@ public class FixMeFourthTest {
 	//}
 
 	//[2]
-	//public void thisWillNotWorkEither(Collection<?> collection) {
- 	//	collection.add(new Base2());
+	//public void thisWillNotWorkEither(Collection<Object> collection) {
+ 	//	collection.add(new Base3());
 	//}
 }
