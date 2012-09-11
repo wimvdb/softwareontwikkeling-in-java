@@ -7,6 +7,6 @@ import org.testng.annotations.Test;
 public class FixMeFirstTest {
 
 	public void test() {
-		Assert.assertEquals("test string", "wrong string");
+		Assert.assertEquals("test string", "test string");
 	}
 }
