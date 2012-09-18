@@ -3,10 +3,14 @@ package be.groept.tests;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import org.testng.annotations.Test;
+
+import be.groept.generics.Base1;
 import be.groept.generics.Base2;
 import be.groept.generics.Base3;
 import be.groept.generics.Super;
 
+@Test
 public class FixMeFourthTest {
 
 	public void testGenerics() {
@@ -16,13 +20,13 @@ public class FixMeFourthTest {
 		// the unused warning may remain it will go away when you continue
 		// Make if type <Integer>
 
-		Collection<Integer> collection = new ArrayList<>();
+		Collection<Integer> collection = new ArrayList<Integer>();
 
 		// -- NO INHERITANCE
 		// TODO SECOND -------> Uncomment [1] and make it work, rewrite message
 		// signature if needed
 
-		//thisWillNotWork(collection);
+		thisWillNotWork(collection);
 
 		// -- LOWER BOUNDS
 		Collection<Base2> upperboundCollectionOne = new ArrayList<Base2>();
@@ -32,17 +36,21 @@ public class FixMeFourthTest {
 
 		// TODO THIRD --------> Uncomment [2] Make it work, rewrite message
 		// signature if needed
-		//thisWillNotWorkEither(upperboundCollectionOne);
-		//thisWillNotWorkEither(upperboundCollectionTwo);
+		thisWillNotWorkEither(upperboundCollectionOne);
+		thisWillNotWorkEither(upperboundCollectionTwo);
 
 	}
 
 	//[1]
-	//public void thisWillNotWork(Collection<Object> collection) {
-	//}
+	public void thisWillNotWork(Collection collection) {
+		collection.add(new Object());
+	}
 
 	//[2]
-	//public void thisWillNotWorkEither(Collection<Object> collection) {
- 	//	collection.add(new Base3());
-	//}
+	public void thisWillNotWorkEither(Collection< ? super Base3> collection) {
+ 		collection.add(new Base3());
+ 		
+	}
+	
+	
 }
